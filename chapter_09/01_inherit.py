@@ -14,13 +14,6 @@ class Person:
         "All people introduce themselves"
         print("Hello, my name is {} {}".format(self.firstname, self.lastname))
 
-    def emote(self):
-        emotion = random.randrange(1,3)
-        if emotion == 1:
-            print("{} is happy today".format(self.firstname))
-        elif emotion == 2:
-            print("{} is sad right now".format(self.firstname))
-
     def status_change(self):
         if self.health == 100:
             print("{} is totally healthy!".format(self.firstname))

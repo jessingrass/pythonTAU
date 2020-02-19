@@ -11,7 +11,7 @@ class Person:
     def introduce(self):
         print("Hi, I'm {} {}.".format(self.firstname, self.lastname))
 
-    def health_change(self):
+    def status_change(self):
         self.health = (self.health - 25)
         if self.health == 100:
             print("{} is fully healthy!".format(self.firstname))
