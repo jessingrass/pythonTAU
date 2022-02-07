@@ -31,6 +31,6 @@ while on:
     elif operation == '/':
         divide()
     elif operation == 'q':
-        calc_on = False
+        on = False
     else:
         print("That operation is not available.  ")
