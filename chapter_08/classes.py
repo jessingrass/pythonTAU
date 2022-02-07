@@ -15,14 +15,21 @@ class Person:
         self.health = (self.health - 25)
         if self.health == 100:
             print("{} is fully healthy!".format(self.firstname))
-        elif self.health == 85:
-            print("{} feels tired.".format(self.firstname))
-        elif self.health == 75:
+        elif self.health >= 76:
+            print("{} feels a little tired.".format(self.firstname))
+        elif self.health >= 51:
             print("{} feels unwell.".format(self.firstname))
         elif self.health <= 50:
             print("{} goes to the doctor.".format(self.firstname))
         else:
             print("{} is unconscious.".format(self.firstname))
+            
+    def emote(self):
+        emotion = random.randrange(1,3)
+        if emotion == 1:
+            print("{} is happy today".format(self.firstname))
+        elif emotion == 2:
+            print("{} is sad right now".format(self.firstname))           
 
 Maria = Person("Maria", "Gutierrez", 95, status=True)
 Rey = Person("Rey", "Jones", 88, status=False)
@@ -38,3 +45,7 @@ Lee.introduce()
 Maria.status_change()
 Rey.status_change()
 Lee.status_change()
+
+Maria.emote()
+Rey.emote()
+Lee.emote()
